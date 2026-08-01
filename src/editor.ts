@@ -98,6 +98,25 @@ export class VacuumCardEditor extends LitElement implements LovelaceCardEditor {
 
         <div class="option">
           <ha-select
+            .label=${localize('editor.error_code_entity')}
+            @selected=${this.valueChanged}
+            .configValue=${'error_code_entity'}
+            .value=${this.config.error_code_entity}
+            @closed=${(e: Event) => e.stopPropagation()}
+            fixedMenuPosition
+            naturalMenuWidth
+          >
+            ${batteryEntities.map(
+              (entity) =>
+                html` <mwc-list-item .value=${entity}
+                  >${entity}</mwc-list-item
+                >`,
+            )}
+          </ha-select>
+        </div>
+
+        <div class="option">
+          <ha-select
             .label=${localize('editor.map')}
             @selected=${this.valueChanged}
             .configValue=${'map'}
