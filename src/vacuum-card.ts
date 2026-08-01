@@ -90,6 +90,14 @@ export class VacuumCard extends LitElement {
     return (this.hass.states[batteryEntityId] as VacuumBatteryEntity) ?? null;
   }
 
+  get errorCodeEntity(): HassEntity | null {
+    const errorCodeEntityId = this.config.error_code_entity;
+    if (!this.hass || !errorCodeEntityId) {
+      return null;
+    }
+    return this.hass.states[errorCodeEntityId] ?? null;
+  }
+
   public setConfig(config: VacuumCardConfig): void {
     this.config = buildConfig(config);
   }
@@ -414,14 +422,22 @@ export class VacuumCard extends LitElement {
       return nothing;
     }
 
+    const errorCodeEntity = this.errorCodeEntity;
+    const showErrorCode =
+      this.entity.state === 'error' &&
+      errorCodeEntity !== null &&
+      !['unknown', 'unavailable', ''].includes(errorCodeEntity.state);
+
+    const displayStatus = showErrorCode
+      ? `${localizedStatus} — ${errorCodeEntity!.state}`
+      : localizedStatus;
+
     return html`
       <div class="status">
         ${this.requestInProgress
           ? html`<ha-spinner class="status-spinner" size="tiny"></ha-spinner>`
           : nothing}
-        <span class="status-text" alt=${localizedStatus}>
-          ${localizedStatus}
-        </span>
+        <span class="status-text" alt=${displayStatus}> ${displayStatus} </span>
       </div>
     `;
   }
