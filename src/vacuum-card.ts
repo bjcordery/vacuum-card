@@ -107,7 +107,16 @@ export class VacuumCard extends LitElement {
   }
 
   public shouldUpdate(changedProps: PropertyValues): boolean {
-    return hasConfigOrEntityChanged(this, changedProps, false);
+    if (hasConfigOrEntityChanged(this, changedProps, false)) {
+      return true;
+    }
+    const oldHass = changedProps.get('hass') as HomeAssistant | undefined;
+    if (!oldHass) {
+      return false;
+    }
+    return [this.config.battery_entity, this.config.error_code_entity]
+      .filter(Boolean)
+      .some((id) => oldHass.states[id] !== this.hass.states[id]);
   }
 
   protected updated(changedProps: PropertyValues) {
