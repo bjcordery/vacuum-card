@@ -64,6 +64,7 @@ export interface VacuumCardConfig {
   entity: string;
   name: string;
   battery_entity: string;
+  error_code_entity: string;
   map: string;
   map_refresh: number;
   image: string;
