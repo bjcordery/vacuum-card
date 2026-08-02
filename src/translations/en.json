@@ -66,6 +66,7 @@
     "entity": "Entity (Required)",
     "name": "Name (Optional)",
     "battery_entity": "Battery Entity (Optional)",
+    "error_code_entity": "Error Code Entity (Optional)",
     "map": "Map Camera (Optional)",
     "image": "Image (Optional)",
     "compact_view": "Compact View",
