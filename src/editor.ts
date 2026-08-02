@@ -47,8 +47,11 @@ export class VacuumCardEditor extends LitElement implements LovelaceCardEditor {
       return nothing;
     }
 
+    const hass = this.hass;
     const vacuumEntities = this.getEntitiesByType('vacuum');
-    const batteryEntities = this.getEntitiesByType('sensor');
+    const batteryEntities = this.getEntitiesByType('sensor').filter(
+      (id) => hass.states[id].attributes.device_class === 'battery',
+    );
     const cameraEntities = [
       ...this.getEntitiesByType('camera'),
       ...this.getEntitiesByType('image'),
