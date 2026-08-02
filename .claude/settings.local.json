@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(python3 -c ' *)",
+      "Bash(npm test *)",
+      "Read(//home/bcordery/.claude/plugins/cache/claude-plugins-official/superpowers/6.2.0/skills/subagent-driven-development/scripts/**)",
+      "Bash(bash /home/bcordery/.claude/plugins/cache/claude-plugins-official/superpowers/6.2.0/skills/subagent-driven-development/scripts/sdd-workspace docs/superpowers/plans/2026-08-01-error-code-entity.md)",
+      "Bash(bash /home/bcordery/.claude/plugins/cache/claude-plugins-official/superpowers/6.2.0/skills/subagent-driven-development/scripts/task-brief docs/superpowers/plans/2026-08-01-error-code-entity.md 1)",
+      "Bash(npm run *)",
+      "Bash(git commit *)",
+      "Bash(bash /home/bcordery/.claude/plugins/cache/claude-plugins-official/superpowers/6.2.0/skills/subagent-driven-development/scripts/review-package docs/superpowers/plans/2026-08-01-error-code-entity.md daafafc8f56b82118c2f8168a24c96bf0dc7ed29 69880fab356a5fa6a3cd533f5b0588a6db210060)",
+      "Bash(bash /home/bcordery/.claude/plugins/cache/claude-plugins-official/superpowers/6.2.0/skills/subagent-driven-development/scripts/task-brief docs/superpowers/plans/2026-08-01-error-code-entity.md 2)",
+      "Bash(bash /home/bcordery/.claude/plugins/cache/claude-plugins-official/superpowers/6.2.0/skills/subagent-driven-development/scripts/review-package docs/superpowers/plans/2026-08-01-error-code-entity.md 69880fab356a5fa6a3cd533f5b0588a6db210060 71db0ec67aa5cac745700355592bbf305be251cf)",
+      "Bash(bash /home/bcordery/.claude/plugins/cache/claude-plugins-official/superpowers/6.2.0/skills/subagent-driven-development/scripts/task-brief docs/superpowers/plans/2026-08-01-error-code-entity.md 3)",
+      "Bash(bash /home/bcordery/.claude/plugins/cache/claude-plugins-official/superpowers/6.2.0/skills/subagent-driven-development/scripts/review-package docs/superpowers/plans/2026-08-01-error-code-entity.md 71db0ec67aa5cac745700355592bbf305be251cf df2d110efe7ddc5b01d6e550511d7f0c185c8650)",
+      "Bash(bash /home/bcordery/.claude/plugins/cache/claude-plugins-official/superpowers/6.2.0/skills/subagent-driven-development/scripts/task-brief docs/superpowers/plans/2026-08-01-error-code-entity.md 4)",
+      "Bash(bash .claude/skills/run-vacuum-card/driver.sh)",
+      "Bash(git checkout *)",
+      "Bash(bash /home/bcordery/.claude/plugins/cache/claude-plugins-official/superpowers/6.2.0/skills/subagent-driven-development/scripts/review-package docs/superpowers/plans/2026-08-01-error-code-entity.md df2d110efe7ddc5b01d6e550511d7f0c185c8650 cb0157ae46f11d6d52cc1c80b30160f0f432bddf)"
+    ]
+  }
+}
